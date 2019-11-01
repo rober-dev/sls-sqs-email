@@ -1,0 +1,70 @@
+{
+  "Records": [
+    {
+      "messageId": "35502f99-b00a-4b59-b349-f610b6175da9",
+      "body": "Test email 02",
+      "messageAttributes": {
+        "type": {
+          "stringValue": "AUTH_ACTIVATION",
+          "stringListValues": [],
+          "binaryListValues": [],
+          "dataType": "String"
+        },
+        "lang": {
+          "stringValue": "es",
+          "stringListValues": [],
+          "binaryListValues": [],
+          "dataType": "String"
+        },
+        "toName": {
+          "stringValue": "Roberto Fraga",
+          "stringListValues": [],
+          "binaryListValues": [],
+          "dataType": "String"
+        },
+        "subject": {
+          "stringValue": "Test email 02",
+          "stringListValues": [],
+          "binaryListValues": [],
+          "dataType": "String"
+        },
+        "fromName": {
+          "stringValue": "ShooWee",
+          "stringListValues": [],
+          "binaryListValues": [],
+          "dataType": "String"
+        },
+        "from": {
+          "stringValue": "no-reply@shoowee.com",
+          "stringListValues": [],
+          "binaryListValues": [],
+          "dataType": "String"
+        },
+        "to": {
+          "stringValue": "rofrapi@gmail.com",
+          "stringListValues": [],
+          "binaryListValues": [],
+          "dataType": "String"
+        },
+        "body": {
+          "stringValue": "Hi Rober. This is a test message",
+          "stringListValues": [],
+          "binaryListValues": [],
+          "dataType": "String"
+        },
+        "value": {
+          "stringValue": "125.5",
+          "stringListValues": [],
+          "binaryListValues": [],
+          "dataType": "Number"
+        },
+        "updatedAt": {
+          "stringValue": "2019/10/25 15:30:00",
+          "stringListValues": [],
+          "binaryListValues": [],
+          "dataType": "String"
+        }
+      }
+    }
+  ]
+}

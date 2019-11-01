@@ -1,0 +1,38 @@
+service: sls-tests
+plugins:
+  - serverless-offline
+provider:
+  name: aws
+  runtime: nodejs10.x
+  region: "eu-west-1"
+  stage: dev
+functions:
+  sendEmail:
+    handler: handler.sendEmail
+    events:
+      - sqs:
+          arn:
+            Fn::GetAtt:
+              - QueueEmail
+              - Arn
+          batchSize: 1
+
+resources:
+  Resources:
+    QueueEmail:
+      Type: "AWS::SQS::Queue"
+      Properties:
+        QueueName: "QueueEmail"
+        # VisibilityTimeout: 30
+        # MessageRetentionPeriod: 60
+        RedrivePolicy:
+          deadLetterTargetArn:
+            "Fn::GetAtt":
+              - ReceiverDeadLetterQueue
+              - Arn
+          maxReceiveCount: 1
+    ReceiverDeadLetterQueue:
+      Type: "AWS::SQS::Queue"
+      Properties:
+        QueueName: "receiverDLQ"
+        MessageRetentionPeriod: 1209600 # 14 days in seconds
